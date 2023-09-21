@@ -9,4 +9,22 @@ body {
   background-color: lightgray;
   font-family: sans-serif;
 }
-/*code found on website: blablabla on date */
+/*code found on website: blablabla on date */    
+
+h1 {
+  font-family:verdana;
+}
+
+.alignright {
+  margin-left: 700px;
+}
+
+.aligncenter {
+  margin-left: 500px;
+}
+
+.alignleft {
+  margin-right: 1150px;
+  height: 750px 
+}
+
