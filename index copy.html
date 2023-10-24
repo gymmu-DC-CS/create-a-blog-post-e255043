@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/x-icon" href="https://th.bing.com/th/id/OIP.BzEBgLYf3O5z7Yu2CdE1AwAAAA?pid=ImgDet&amp;rs=1">
   <link rel="stylesheet" href="stylesheet.css">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +24,7 @@
 
 </head>
 <body>
- <!-- Got this code for the taskbar from my project work in secondary school  -->
+ 
   <div class="taskbar">
     <div class="taskbar-item" onclick="openTaskPage(1)">
       Characteristics
@@ -46,7 +47,6 @@
   </div>
   <h1 id="taskTitle"></h1>
   <div id="taskContent"></div>
-     
   <script>
 
         function openTaskPage(taskNumber) {
@@ -55,10 +55,8 @@
       
           if (taskNumber === 1) {
             taskTitle.innerHTML = "Timo Boll";
-            taskContent.innerHTML = `
-            <h3> Characteristics <\/h3> Timo Boll is a German professional table tennis player who is <br> widely regarded as one of the greatest players in the sport's history. <br> Known for his exceptional skills and versatility, <br> Boll possesses several remarkable characteristics <br>that have contributed to his success and popularity.<br><br>Some of his key characteristics include:<br>- Technical precision<br>- Tactical intelligence<br>- Quick reflexes<br>- Powerful shots<br>- Mental toughness <h3>Family<\/h3> Timo Boll is married to Rodelia Jacobi, whom he met <br> while studying at the University of Bochum. <br> The couple has two children together, a daughter and a son. <br> Boll is known for his close relationship with his family and <br> has often held them responsible for his success on and off the court. ";  
-              `;
-            } else if (taskNumber === 2) {
+            taskContent.innerHTML = " <h3> Characteristics <\/h3> Timo Boll is a German professional table tennis player who is <br> widely regarded as one of the greatest players in the sport's history. <br> Known for his exceptional skills and versatility, <br> Boll possesses several remarkable characteristics <br>that have contributed to his success and popularity.<br><br>Some of his key characteristics include:<br>- Technical precision<br>- Tactical intelligence<br>- Quick reflexes<br>- Powerful shots<br>- Mental toughness <h3>Family<\/h3> Timo Boll is married to Rodelia Jacobi, whom he met <br> while studying at the University of Bochum. <br> The couple has two children together, a daughter and a son. <br> Boll is known for his close relationship with his family and <br> has often held them responsible for his success on and off the court.";
+        } else if (taskNumber === 2) {
             taskTitle.innerHTML = "Timo Boll";
             taskContent.innerHTML = `
      `;
@@ -149,8 +147,7 @@
       </div>
     </div>
 `;
-          }
-        }
+         
         function displaySelectedText() {
   const dropdown = document.getElementById("dropdown");
   const selectedText = document.getElementById("selectedText");
@@ -159,7 +156,7 @@
 });
   if (dropdown.value === "Olympic Games") {
     selectedText.innerHTML = `
-      <ul>
+      <ul>   
         <li>Silver medal in the men's team event at the 2008 Beijing Olympics<\/li>
         <li>Bronze medal in the men's team event at the 2012 London Olympics<\/li>
         <li>Bronze medal in the men's team event at the 2016 London Olympics<\/li>
@@ -209,10 +206,6 @@
    }
   }
   </script>
-  <!-- I got the code for the boarders around the subtitles i got from W3 schools -->
-  <!--I got the code for the skill bar also from w3 schools-->
-  <!--I got the idea and some code for the picture  map from w3 schools-->
-  <!--For the coordinates i used the paint app to locate the different countries coordinates-->
-  <!-- The code for the dropdown I got from chatgpt-->
 </body>
-</html>   
+</html>
+

@@ -3,12 +3,10 @@
 *::after {
   box-sizing: content-box;
 }
-
-body {
-  margin: 0;
-  background-color: lightgray;
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
 }
+
 /*code found on website: blablabla on date */    
 
 h1 {
@@ -16,7 +14,7 @@ h1 {
 }
 
 .alignright {
-  margin-left: 700px;
+  margin-left: 1000px;
 }
 
 .aligncenter {
@@ -24,7 +22,6 @@ h1 {
 }
 
 .alignleft {
-  margin-right: 1150px;
-  height: 750px 
+  margin-left: -1500px;
+  height: 800px;
 }
-
