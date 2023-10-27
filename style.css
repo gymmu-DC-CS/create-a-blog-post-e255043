@@ -3,9 +3,26 @@
 *::after {
   box-sizing: content-box;
 }
-
-body {
-  margin: 0;
-  background-color: lightgray;
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
 }
+
+/*code found on website: blablabla on date */    
+
+h1 {
+  font-family:verdana;
+}
+
+.alignright {
+  margin-left: 1000px;
+}
+
+.aligncenter {
+  margin-left: 500px;
+}
+
+.alignleft {
+  margin-left: -1500px;
+  height: 800px;
+}
+
