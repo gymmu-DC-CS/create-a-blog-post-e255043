@@ -46,7 +46,7 @@
   </div>
   <h1 id="taskTitle"></h1>
   <div id="taskContent"></div>
-  <body onload="openTaskPage(1)">
+     
   <script>
 
         function openTaskPage(taskNumber) {
@@ -60,134 +60,7 @@
               `;
             } else if (taskNumber === 2) {
             taskTitle.innerHTML = "Timo Boll";
-            taskContent.innerHTML = `<u> <h3> Childhood and Youth </h3> </u>
-<style>
-  .timeline {
-  position: relative;
-  margin: 0 auto;
-}
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 625px; /* Adjust as needed */
-  width: 2px;
-  height: 100%;
-  background-color: #ccc;
-}
-
-.container {
-  padding: 10px 20px; 
-  position: relative;
-  background-color: inherit;
-}
-
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: calc(50% - 12.5px);
-}
-
-.left {
-  right: +12%; /* Adjust as needed */
-  text-align: right;
-}
-
-.right {
-  left: +12%; /* Adjust as needed */
-  text-align: left;
-}
-.right::after {
-  content: '';
-  position: absolute;
-  top: calc(50% - 5px); /* Adjust as needed */
-  right: 1440px;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  background-color: orange;
-}
-
-.left::after {
-  content: '';
-  position: absolute;
-  top: calc(50% - 5px); /* Adjust as needed */
-  left: 1440px;
-  transform: translateY(-50%);
-  width: 10px;
-  height: 10px;
-  background-color: orange;
-}
-.content {
-    padding-top:20px; 
-}
-
-.year {
-    font-size:18px; 
-    font-weight:bold; 
-    color:#FF9F55; 
-    margin-bottom:-10px; 
-}
-</style>
-</head>
-<body>
-
-<div class="timeline">
-
-<div class="container left">
-    <div class="content">
-      <h2 class="year">1981</h2>
-      <p>Timo Boll is born on March 8th in Erbach, Germany.</p>
-    </div>
-</div>
-
-<div class="container right">
-    <div class="content">
-      <h2 class="year">1995</h2>
-      <p>Timo Boll starts playing table tennis at the age of 4.</p>
-    </div>
-</div>
-
-<div class="container left">
-    <div class="content">
-      <h2 class="year">1998</h2>
-      <p>Timo Boll joins TSV Höchst and wins his first national championship in Germany.</p>
-    </div>
-</div>
-
-<div class="container right">
-    <div class="content">
-      <h2 class="year">2000</h2>
-      <p>Timo Boll transfers to FTG Frankfurt.</p>
-    </div>
-</div>
-
-<div class="container left">
-    <div class="content">
-      <h2 class="year">2001</h2>
-      <p>Timo Boll moves to Borussia Düsseldorf, one of the top table tennis clubs in Germany.</p>
-    </div>
-</div>
-
-<div class="container right">
-    <div class="content">
-      <h2 class="year">2002</h2>
-      <p>Timo Boll wins the European Youth Championship.</p>
-    </div>
-</div>
-
-<div class="container left">
-    <div class="content">
-      <h2 class="year">2005</h2>
-      <p>Timo Boll becomes the youngest player to win the World Cup in table tennis at the age of 23.</p>
-    </div>
-</div>
-
-</div>
+            taskContent.innerHTML = `
      `;
           } else if (taskNumber === 3) {
           taskTitle.innerHTML = "Timo Boll" 
@@ -260,40 +133,8 @@
          
           } else if (taskNumber === 6) {
             taskTitle.innerHTML = "Timo Boll";
-            taskContent.innerHTML = ` 
-            <h3> Accomplishments <\/h3>      
-              <!DOCTYPE html>
-<html>
-<head>
-    <title>Dropdown List Example</title>
-</head>
-<body>
-    <!-- Accomplishment Section -->
-    <div id="accomplishment-section">
-        <h2>Select an option:</h2>
-
-        <select id="dropdown">
-            <option value="">Select an option</option>
-            <option value="olympic">Olympic Games</option>
-            <option value="world-championship">World Championship</option>
-            <option value="european-championship">European Championship</option>
-            <option value="ittf-pro-tour">ITTF Pro Tour</option>
-            <option value="bundesliga">Bundesliga</option>
-            <option value="other-awards">Other Awards</option>
-        </select>
-
-        <script>
-            var dropdown = document.getElementById("dropdown");
-            dropdown.addEventListener("change", function() {
-                var selectedOption = dropdown.options[dropdown.selectedIndex].value;
-                console.log("Selected option: " + selectedOption);
-                // You can perform any action based on the selected option here
-            });
-    </div>
-
-</body>
-</html>
-      
+            taskContent.innerHTML = ` <h3> Accomplishments <\/h3>
+              
               <div style="display: flex;">
   <div style="flex: 1;"></div>
   <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center;">
@@ -341,11 +182,68 @@
 `;
           }
         }
-      </script>    
+        function displaySelectedText() {
+  const dropdown = document.getElementById("dropdown");
+  const selectedText = document.getElementById("selectedText");
+  dropdown.addEventListener("change", function() {
+  selectedText.textContent = "Selected: " + dropdown.options[dropdown.selectedIndex].value;
+});
+  if (dropdown.value === "Olympic Games") {
+    selectedText.innerHTML = `
+      <ul>
+        <li>Silver medal in the men's team event at the 2008 Beijing Olympics<\/li>
+        <li>Bronze medal in the men's team event at the 2012 London Olympics<\/li>
+        <li>Bronze medal in the men's team event at the 2016 London Olympics<\/li>
+        <li>5.Place in the men's single event at the 2004 Athen Olympics<\/li>
+      <\/ul>
+        <video src="https://youtu.be/Q6Y8cEtLynI" width=400 height=300 cntrols poster="https://thumbs.dreamstime.com/b/timo-boll-playing-table-tennis-olympic-games-rio-germany-86640888.jpg">
+    `; 
+  } else if (dropdown.value === "World Championships") {
+    selectedText.innerHTML = `
+      <ul>
+        <li>Winner of the men's singles event at the 2002 World Championships held in Paris, France.<\/li>
+        <li>Runner-up in the men's singles event at the 2004 World Championships held in Doha, Qatar.<\/li>
+        <li>Bronze medalist in the men's singles event at the 2011 World Championships held in Rotterdam, Netherlands.<\/li>
+        <li>Bronze medalist in the men's singles event at the 2021 World Championships held in Houston, USA.<\/li>
+      <\/ul>
+    `;
+  } else if (dropdown.value === "European Championships") {
+    selectedText.innerHTML = `
+      <ul>
+        <li>Winner of the men's singles event at the European Championships on multiple occasions<\/li>
+        <li>Gold medalist in the men's team event at various European Championships<\/li>
+      <\/ul>
+    `;
+  } else if (dropdown.value === "ITTF Pro Tour") {
+    selectedText.innerHTML = `
+    <br> Timo Boll has won several ITTF Pro Tour titles. However, more detailed information about the number of ITTF Pro Tour events he has won is not available. <br> However, Timo Boll is known for his successes on the ITTF Pro Tour and has won many tournaments on this international table tennis tournament circuit during his career.
+    `;
+  } else if (dropdown.value === "German National Championships") {
+    selectedText.innerHTML = `
+     <br> Multiple-time winner of the German National Championships in both singles and doubles events.
+    `;
+  } else if (dropdown.value === "Other Awards") {
+    selectedText.innerHTML = `
+      <ul>
+        <li>Named German Sportsman of the Year in 2003<\/li>
+        <li>Recipient of the prestigious Fair Play Award by ITTF (International Table Tennis Federation)<\/li>
+        <li>Two times winner of the european team championship with Germany in 2017 and 2019
+      <\/ul>
+    `;
+  } else if (dropdown.value === "Bundesliga Awards") {
+    selectedText.innerHTML = `
+      <ul>
+        <li>Player of the Year: Timo Boll has been named Player of the Year multiple times in the Bundesliga. <br> This award recognizes his outstanding performance and contributions to the league.<\/li>
+        <li>Team Champion Titles: Boll has won 9x team champion titles with his club in the Bundesliga. <br> These titles signify his success in leading his team to victory and achieving excellence in team competitions.<\/li>
+      <\/ul>
+    `;
+   }
+  }
+  </script>
   <!-- I got the code for the boarders around the subtitles i got from W3 schools -->
   <!--I got the code for the skill bar also from w3 schools-->
   <!--I got the idea and some code for the image  map from w3 schools-->
   <!-- The code for the dropdown I got from chatgpt-->
-  <!--The pictures such as the text about timo boll are from different google searches--> 
+  <!--The pictures such as the text about timo boll are from different google searches-->
 </body>
 </html>   

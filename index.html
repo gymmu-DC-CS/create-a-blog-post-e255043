@@ -46,7 +46,7 @@
   </div>
   <h1 id="taskTitle"></h1>
   <div id="taskContent"></div>
-     
+  <body onload="openTaskPage(1)">
   <script>
 
         function openTaskPage(taskNumber) {
@@ -56,11 +56,140 @@
           if (taskNumber === 1) {
             taskTitle.innerHTML = "Timo Boll";
             taskContent.innerHTML = `
-            <h3> Characteristics <\/h3> Timo Boll is a German professional table tennis player who is <br> widely regarded as one of the greatest players in the sport's history. <br> Known for his exceptional skills and versatility, <br> Boll possesses several remarkable characteristics <br>that have contributed to his success and popularity.<br><br>Some of his key characteristics include:<br>- Technical precision<br>- Tactical intelligence<br>- Quick reflexes<br>- Powerful shots<br>- Mental toughness <h3>Family<\/h3> Timo Boll is married to Rodelia Jacobi, whom he met <br> while studying at the University of Bochum. <br> The couple has two children together, a daughter and a son. <br> Boll is known for his close relationship with his family and <br> has often held them responsible for his success on and off the court. ";  
+            <u> <h3> Characteristics <\/h3> </u> 
+              <img src="https://cdn.prod.www.spiegel.de/images/2416420c-0001-0004-0000-000001257182_w1280_r1.77_fpx33.34_fpy50.jpg" alt="Timo Boll" width= 450px height= 300px style= "float: right; margin-right: 475px;">
+              Timo Boll is a German professional table tennis player who is <br> widely regarded as one of the greatest players in the sport's history. <br> Known for his exceptional skills and versatility, <br> Boll possesses several remarkable characteristics <br>that have contributed to his success and popularity.<br><br>Some of his key characteristics include:<br>- Technical precision<br>- Tactical intelligence<br>- Quick reflexes<br>- Powerful shots<br>- Mental toughness <u> <h3>Family<\/h3> </u> Timo Boll is married to Rodelia Jacobi, whom he met <br> while studying at the University of Bochum. <br> The couple has two children together, a daughter and a son. <br> Boll is known for his close relationship with his family and <br> has often held them responsible for his success on and off the court.
               `;
             } else if (taskNumber === 2) {
             taskTitle.innerHTML = "Timo Boll";
-            taskContent.innerHTML = `
+            taskContent.innerHTML = `<u> <h3> Childhood and Youth </h3> </u>
+<style>
+  .timeline {
+  position: relative;
+  margin: 0 auto;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 625px; /* Adjust as needed */
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+}
+
+.container {
+  padding: 10px 20px; 
+  position: relative;
+  background-color: inherit;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: calc(50% - 12.5px);
+}
+
+.left {
+  right: +12%; /* Adjust as needed */
+  text-align: right;
+}
+
+.right {
+  left: +12%; /* Adjust as needed */
+  text-align: left;
+}
+.right::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 5px); /* Adjust as needed */
+  right: 1440px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: orange;
+}
+
+.left::after {
+  content: '';
+  position: absolute;
+  top: calc(50% - 5px); /* Adjust as needed */
+  left: 1440px;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: orange;
+}
+.content {
+    padding-top:20px; 
+}
+
+.year {
+    font-size:18px; 
+    font-weight:bold; 
+    color:#FF9F55; 
+    margin-bottom:-10px; 
+}
+</style>
+</head>
+<body>
+
+<div class="timeline">
+
+<div class="container left">
+    <div class="content">
+      <h2 class="year">1981</h2>
+      <p>Timo Boll is born on March 8th in Erbach, Germany.</p>
+    </div>
+</div>
+
+<div class="container right">
+    <div class="content">
+      <h2 class="year">1995</h2>
+      <p>Timo Boll starts playing table tennis at the age of 4.</p>
+    </div>
+</div>
+
+<div class="container left">
+    <div class="content">
+      <h2 class="year">1998</h2>
+      <p>Timo Boll joins TSV Höchst and wins his first national championship in Germany.</p>
+    </div>
+</div>
+
+<div class="container right">
+    <div class="content">
+      <h2 class="year">2000</h2>
+      <p>Timo Boll transfers to FTG Frankfurt.</p>
+    </div>
+</div>
+
+<div class="container left">
+    <div class="content">
+      <h2 class="year">2001</h2>
+      <p>Timo Boll moves to Borussia Düsseldorf, one of the top table tennis clubs in Germany.</p>
+    </div>
+</div>
+
+<div class="container right">
+    <div class="content">
+      <h2 class="year">2002</h2>
+      <p>Timo Boll wins the European Youth Championship.</p>
+    </div>
+</div>
+
+<div class="container left">
+    <div class="content">
+      <h2 class="year">2005</h2>
+      <p>Timo Boll becomes the youngest player to win the World Cup in table tennis at the age of 23.</p>
+    </div>
+</div>
+
+</div>
      `;
           } else if (taskNumber === 3) {
           taskTitle.innerHTML = "Timo Boll" 
@@ -126,93 +255,118 @@
     `;
         } else if (taskNumber === 4) {
             taskTitle.innerHTML = "Timo Boll";
-            taskContent.innerHTML = " <h3> Impact on table tennis <\/h3> Timo Boll has had a significant impact on the sport of table tennis in various ways. <br> Here are some of his notable contributions:<ul> <li>Elevating the Sport's Popularity: Boll's exceptional skills and captivating playing style have helped increase the popularity of table tennis worldwide. His performances in high-profile tournaments and exhibition matches have attracted new fans to the sport, making it more accessible and appealing to a broader audience. <\/li> <li> Inspiring Future Generations: As one of the most successful and respected players in table tennis history, Boll has become an inspiration for aspiring players around the world. His achievements and work ethic motivate young talents to pursue their dreams and strive for excellence in the sport. <\/li> <li> Raising the Bar of Performance: Boll's remarkable skills and versatility have set new standards for performance in table tennis. His ability to seamlessly switch between offensive and defensive styles, along with his precision shots, has pushed other players to improve their game and develop new techniques to keep up with his level of play. <\/li> <li> Promoting Fair Play and Sportsmanship: Boll is known for his exemplary sportsmanship both on and off the table. His respectful attitude towards opponents, graciousness in victory or defeat, and adherence to fair play principles have helped promote a positive image of table tennis as a sport that values integrity and respect. <\/li> <li> Representing Germany Internationally: Boll has been a prominent figure in representing Germany at international competitions, including the Olympic Games, World Championships, and European Championships. His success on the global stage has not only brought recognition to himself but also showcased Germany's strength in table tennis. <\/li> <li> Contributing to Team Success: Boll's presence in the German national team has been instrumental in their success over the years. He has played a crucial role in leading Germany to numerous victories in team events, including multiple European Championships titles and World Cup triumphs.<\/li> <li> Brand Ambassadorship: Boll's popularity and reputation have made him a sought-after brand ambassador for various table tennis equipment manufacturers. His endorsement of products has helped promote the sport and encourage participation among enthusiasts at all levels. <\/li> <\/ul> Overall, Timo Boll's impact on table tennis extends beyond his individual achievements. Through his exceptional skills, sportsmanship, and dedication to the sport, he has left a lasting legacy that continues to inspire and shape the future of table tennis.";
-          } else if (taskNumber === 5) {
+            taskContent.innerHTML = `
+             <u> <h3> Impact on table tennis <\/h3> </u>
+              <img src="https://th.bing.com/th/id/OIP.2WWTHaFF__g321fufsNeHgHaFG?pid=ImgDet&w=1280&h=881&rs=1" alt="Timo Boll" width= 450px height= 300px style= "float: right; margin-right: 200px;">
+              <img src="https://th.bing.com/th/id/R.c6cdff401bff7bf948f2f1a5778843ff?rik=uvO9wzqTlvxbKw&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20180602%2f70174bfe23a24897acc28d7c840a8e6f.jpeg&ehk=%2fWvDGEtz%2b9gZUEl1E2ELAKWYbD3jrBpUQmuENHAcq5g%3d&risl=&pid=ImgRaw&r=0" alt="Timo Boll" width= 450px height= 300px style= "float: right; margin-right: -450px; margin-top: 500px ;">
+              Timo Boll has had a significant impact on the sport of table tennis in various ways. <br> Here are some of his notable contributions:<ul> <li>Elevating the Sport's Popularity: <br> Boll's exceptional skills and captivating playing style <br>  have helped increase the popularity of table tennis worldwide. <br> His performances in high-profile tournaments and exhibition matches <br> have attracted new fans to the sport, <br> making it more accessible and appealing to a broader audience. <\/li> <li> Inspiring Future Generations: <br> As one of the most successful and respected players in table tennis history, <br> Boll has become an inspiration for aspiring players around the world. <br> His achievements and work ethic motivate young talents to pursue their dreams <br> and strive for excellence in the sport. <\/li> <li> Raising the Bar of Performance: <br> Boll's remarkable skills and versatility <br> have set new standards for performance in table tennis. <br> His ability to seamlessly switch between offensive and defensive styles, <br> along with his precision shots, has pushed other players to improve their game <br> and develop new techniques to keep up with his level of play. <\/li> <li> Promoting Fair Play and Sportsmanship: <br> Boll is known for his exemplary sportsmanship both on and off the table. <br> His respectful attitude towards opponents, graciousness in victory or defeat, <br> and adherence to fair play principles have helped <br> promote a positive image of table tennis as a sport that values integrity and respect. <\/li> <li> Representing Germany Internationally: <br> Boll has been a prominent figure in representing Germany at international competitions, <br> including the Olympic Games, World Championships, and European Championships. <br> His success on the global stage has not only brought recognition to himself <br> but also showcased Germany's strength in table tennis. <\/li> <li> Contributing to Team Success: <br> Boll's presence in the German national team <br> has been instrumental in their success over the years. <br> He has played a crucial role in leading Germany to numerous victories in team events, <br> including multiple European Championships titles and World Cup triumphs.<\/li> <li> Brand Ambassadorship: <br> Boll's popularity and reputation have made him <br> a sought-after brand ambassador for various table tennis equipment manufacturers. <br> His endorsement of products has helped promote the sport and encourage <br> participation among enthusiasts at all levels. <\/li> <\/ul> Overall, Timo Boll's impact on table tennis extends beyond his individual achievements. <br> Through his exceptional skills, sportsmanship, and dedication to the sport, <br> he has left a lasting legacy that continues to inspire and shape the future of table tennis.
+      `;
+            } else if (taskNumber === 5) {
             taskTitle.innerHTML = "Timo Boll";
-            taskContent.innerHTML = "<h3> Borussia Düsseldorf <\/h3> Borussia Düsseldorf wurde 1925 gegründet und ist einer der ältesten und erfolgreichsten Tischtennisvereine in Deutschland. <br> Der Verein hat eine lange Geschichte und hat im Laufe der Jahre zahlreiche nationale und internationale Titel gewonnen. <br> In den 1960er Jahren begann die Ära des Erfolgs für Borussia Düsseldorf. <br>Unter der Führung von Trainer Helmut Hampl gewann der Verein mehrere Deutsche Meisterschaften und etablierte sich als eine der besten Mannschaften in Deutschland.<br>In den 1980er Jahren erlebte Borussia Düsseldorf eine weitere erfolgreiche Phase unter Trainer Zdenko Uzorinac.<br> Die Mannschaft gewann mehrere Deutsche Meisterschaften und konnte auch international Erfolge feiern. <br> Ein Wendepunkt in der Geschichte von Borussia Düsseldorf war die Verpflichtung von Timo Boll im Jahr 2007. <br> Boll, einer der besten Tischtennisspieler der Welt, trug maßgeblich zum Erfolg des Vereins bei. <br> Unter seiner Führung gewann Borussia Düsseldorf mehrere Deutsche Meisterschaften und Champions-League-Titel. <br> Borussia Düsseldorf hat auch international große Erfolge erzielt. <br> Der Verein hat mehrmals den European Champions League-Titel gewonnen und war regelmäßig in den Finalrunden vertreten. <br> Die Geschichte von Borussia Düsseldorf ist geprägt von herausragenden Spielern, erfolgreichen Trainern und einer starken Vereinskultur. <br> Der Verein hat sich als eine der Top-Mannschaften im Tischtennis etabliert und ist bekannt für sein Engagement für den Sport.";
-         
-          } else if (taskNumber === 6) {
+            taskContent.innerHTML = `<u> <h3> Borussia Düsseldorf <\/h3> </u>  
+              Borussia Düsseldorf was founded in <b>1925 </b>and <br> is one of the oldest and most successful table tennis clubs in Germany. <br> The club has a long history <br> and has won numerous national and international titles over the years. <br> The <b> 1960s </b> marked the beginning <br> of the era of success for Borussia Düsseldorf. <br> Under the leadership of coach Helmut Hampl, <br> the club won several German championships <br> and established itself as one of the best teams in Germany. <br> In the <b> 1980s </b>, Borussia Düsseldorf experienced <br> another successful phase under coach Zdenko Uzorinac. <br> The team won several German championships <br> and was also able to celebrate international successes. <br> A turning point in the history of Borussia Düsseldorf <br> was the signing of Timo Boll in <b> 2007 </b>. <br> Boll, one of the best table tennis players in the world,  <br> contributed significantly to the success of the club. <br> Under his leadership, Borussia Düsseldorf won several <br> German championships and Champions League titles. <br> Borussia Düsseldorf has also achieved great success internationally. <br> The club has won the European Champions League title several times <br> and has regularly featured in the final rounds. <br> The history of Borussia Düsseldorf is characterized by outstanding players, <br> successful coaches and a strong club culture. <br> The club has established itself as one of the top teams in table tennis <br> and is known for its commitment to the sport.
+              <img src="https://media0.faz.net/ppmedia/aktuell/sport/4082389474/1.7110426/facebook_teaser/duesseldorfer-champions-boll.jpg" alt="Timo Boll" width= 450px height= 300px style= "float: right; margin-right: 500px; margin-top: -227px">
+              <img src="https://designbote.com/wp-content/uploads/tdomf/15509/02_borussia_duesseldorf_signet.jpg" alt="Timo Boll" width= 450px height= 200px style= "float: right; margin-right: -325px; margin-top: -500px">
+              <img src="https://www.bettv.de/wp-content/uploads/2021/06/Jubel_Borussia-Duesseldorf_Foto-BeLa-Sportfoto-scaled.jpg" alt="Timo Boll" width= 450px height= 300px style= "float: right; margin-right: -825px; margin-top: -550px">
+              `;
+            } else if (taskNumber === 6) {
             taskTitle.innerHTML = "Timo Boll";
-            taskContent.innerHTML = ` <h3> Accomplishments <\/h3>
-              
-    <div style="display: flex;">
-      <div style="flex: 1;">
+            taskContent.innerHTML = ` <u> <h3> Accomplishments <\/h3> </u>
+              <div style="display: flex;">
+  <div style="flex: 1;"></div>
+  <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center;">
+    <div style="position: relative;">
+      <img src="https://th.bing.com/th/id/R.3941bef2231d7af5144ed4e328aad99b?rik=5iPfmzMXBZc3Ew&riu=http%3a%2f%2fwww.kostenlose-landkarten.de%2fbilder%2fweltkarte.png&ehk=dkEbHRhFM2vgohXfTn4wHYWIPDmSMu9kDNkmAmibOn8%3d&risl=&pid=ImgRaw&r=0" usemap="#winmap" style="width: 800px; height: 512px; z-index: 1;">
+      <map name="winmap">
+        <area shape="rect" coords="573,248,633,285" href="https://www.tischtennis.de/news/china-open-deutsch-chinesische-doppel-freundschaft-endet-mit-gold-fuer-timo-boll-und-ma-long.html" title="China Open">
+        <area shape="rect" coords="401,231,417,246" href="https://www.megaspin.net/articles/173/timo-boll-wins-2002-men-s-world-cup" title="World Championship France 2002">
+        <area shape="rect" coords="496,280,498,282" href="https://www.wikiwand.com/en/2004_World_Table_Tennis_Championships" title="World Championship in Qatar 2004">
+        <area shape="rect" coords="220,272,229,278" href="https://www.dw.com/de/wm-bronze-mit-40-der-ewige-timo-boll/a-59967034" title="World Championship in Houston 2021">
+      </map>
+      <div id="pin1" class="pin" style="top: 265px; left: 585px; pointer-events: none;"><img src="https://o.remove.bg/downloads/89a8d771-b516-4e97-b9f1-7cfbce72ac79/drawing-pin-clip-art-desktop-wallpaper-portable-network-graphics-image-png-favpng-SdH5e9rm5HtHSyK7yrFAi3aPe-removebg-preview.png"></div>
+      <div id="pin2" class="pin" style="top: 225px; left: 398px; pointer-events: none;"><img src="https://o.remove.bg/downloads/89a8d771-b516-4e97-b9f1-7cfbce72ac79/drawing-pin-clip-art-desktop-wallpaper-portable-network-graphics-image-png-favpng-SdH5e9rm5HtHSyK7yrFAi3aPe-removebg-preview.png"></div>
+      <div id="pin3" class="pin" style="top: 280px; left: 482px; pointer-events: none;"><img src="https://o.remove.bg/downloads/89a8d771-b516-4e97-b9f1-7cfbce72ac79/drawing-pin-clip-art-desktop-wallpaper-portable-network-graphics-image-png-favpng-SdH5e9rm5HtHSyK7yrFAi3aPe-removebg-preview.png"></div>      
+      <div id="pin4" class="pin" style="top: 265px; left: 200px; pointer-events: none;"><img src="https://o.remove.bg/downloads/89a8d771-b516-4e97-b9f1-7cfbce72ac79/drawing-pin-clip-art-desktop-wallpaper-portable-network-graphics-image-png-favpng-SdH5e9rm5HtHSyK7yrFAi3aPe-removebg-preview.png"></div>
     </div>
-      <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center;">
-        <img src="https://th.bing.com/th/id/R.3941bef2231d7af5144ed4e328aad99b?rik=5iPfmzMXBZc3Ew&riu=http%3a%2f%2fwww.kostenlose-landkarten.de%2fbilder%2fweltkarte.png&ehk=dkEbHRhFM2vgohXfTn4wHYWIPDmSMu9kDNkmAmibOn8%3d&risl=&pid=ImgRaw&r=0" usemap="#winmap" style="width: 800px; height: 512px;">
-        <map name="winmap">
-          <area shape="rect" coords="573, 248, 633, 285" href="https://www.tischtennis.de/news/china-open-deutsch-chinesische-doppel-freundschaft-endet-mit-gold-fuer-timo-boll-und-ma-long.html" title="China Open" style="cursor: pointer;">
-          <area shape="rect" coords="401, 231, 417, 246" href="https://www.megaspin.net/articles/173/timo-boll-wins-2002-men-s-world-cup" title="World Championship France 2002" style="cursor: pointer;">
-          <area shape="rect" coords="496,280, 498, 282" href="" title="World Championship in Qatar 2004 " style="cursor: pointer;">
-          <area shape="rect" coords="220, 272, 229, 278" href="https://www.dw.com/de/wm-bronze-mit-40-der-ewige-timo-boll/a-59967034" title="World Championship in Houston 2021 " style="cursor: pointer;">
-        </map>
-      </div>
-    </div>
-`;
-          }
-        }
-        function displaySelectedText() {
-  const dropdown = document.getElementById("dropdown");
-  const selectedText = document.getElementById("selectedText");
-  dropdown.addEventListener("change", function() {
-  selectedText.textContent = "Selected: " + dropdown.options[dropdown.selectedIndex].value;
-});
-  if (dropdown.value === "Olympic Games") {
-    selectedText.innerHTML = `
+  </div>
+</div>        
+<style>
+.pin {
+  position: absolute;
+}
+
+.pin img {
+  width: 30px;
+}
+
+#pin1 img {
+  transform: rotate(45deg);
+}
+
+#pin2 img {
+  transform: rotate(-45deg);
+}
+
+#pin3 img {
+  transform: rotate(135deg);
+}
+
+#pin4 img {
+  transform: rotate(-135deg);
+}
+</style>
+<div>
+  <p style="margin-top: -530px;"><h4 style="border:2px solid #000000;
+          width: 112px
+          ">Olympic Games<\/h4>
       <ul>
-        <li>Silver medal in the men's team event at the 2008 Beijing Olympics<\/li>
-        <li>Bronze medal in the men's team event at the 2012 London Olympics<\/li>
-        <li>Bronze medal in the men's team event at the 2016 London Olympics<\/li>
-        <li>5.Place in the men's single event at the 2004 Athen Olympics<\/li>
+        <li>Silver medal in the men's team event at the <b> 2008 </b> Beijing Olympics<\/li>
+        <li>Bronze medal in the men's team event at the <b> 2012 </b> London Olympics<\/li>
+        <li>Bronze medal in the men's team event at the <b> 2016 </b>London Olympics<\/li>
+        <li>5.Place in the men's single event at the<b> 2004 </b> Athen Olympics<\/li>
       <\/ul>
-        <video src="https://youtu.be/Q6Y8cEtLynI" width=400 height=300 cntrols poster="https://thumbs.dreamstime.com/b/timo-boll-playing-table-tennis-olympic-games-rio-germany-86640888.jpg">
-    `; 
-  } else if (dropdown.value === "World Championships") {
-    selectedText.innerHTML = `
+      <h4  style="border:2px solid red;
+          width: 150px
+          ">World Championship<\/h4>
       <ul>
-        <li>Winner of the men's singles event at the 2002 World Championships held in Paris, France.<\/li>
-        <li>Runner-up in the men's singles event at the 2004 World Championships held in Doha, Qatar.<\/li>
-        <li>Bronze medalist in the men's singles event at the 2011 World Championships held in Rotterdam, Netherlands.<\/li>
-        <li>Bronze medalist in the men's singles event at the 2021 World Championships held in Houston, USA.<\/li>
+        <li>Winner of the men's singles event at the <b>2002 </b> World Championships held in Paris.<\/li>
+        <li>Runner-up in the men's singles event at the <b>2004 </b>World Championships held in Doha.<\/li>
+        <li>Bronze medalist in the men's singles event at the <b> 2011 </b> World Championships held in Rotterdam.<\/li>
+        <li>Bronze medalist in the men's singles event at the <b>2021 </b>World Championships held in Houston.<\/li>
       <\/ul>
-    `;
-  } else if (dropdown.value === "European Championships") {
-    selectedText.innerHTML = `
+      <h4 style="border:2px solid #ffff00;
+          width: 175px
+          ">European Championship</h4>
       <ul>
         <li>Winner of the men's singles event at the European Championships on multiple occasions<\/li>
         <li>Gold medalist in the men's team event at various European Championships<\/li>
       <\/ul>
-    `;
-  } else if (dropdown.value === "ITTF Pro Tour") {
-    selectedText.innerHTML = `
-    <br> Timo Boll has won several ITTF Pro Tour titles. However, more detailed information about the number of ITTF Pro Tour events he has won is not available. <br> However, Timo Boll is known for his successes on the ITTF Pro Tour and has won many tournaments on this international table tennis tournament circuit during his career.
-    `;
-  } else if (dropdown.value === "German National Championships") {
-    selectedText.innerHTML = `
-     <br> Multiple-time winner of the German National Championships in both singles and doubles events.
-    `;
-  } else if (dropdown.value === "Other Awards") {
-    selectedText.innerHTML = `
-      <ul>
-        <li>Named German Sportsman of the Year in 2003<\/li>
+      <h4 style="border:2px solid #000000;
+          width: 105px
+          ">ITTF Pro Tour<\/h4>
+    Timo Boll has won several ITTF Pro Tour titles. <br> However, more detailed information <br> about the number of ITTF Pro Tour events he has won is not available. <br> However, Timo Boll is known for his successes <br> on the ITTF Pro Tour and has won many tournaments <br> on this international table tennis tournament circuit during his career.
+    <h4  style="border:2px solid red;
+          width: 225px
+          ">German National Championship<\/h4>
+    Multiple-time winner of the German National Championships <br> in both singles and doubles events.
+    <h4 style="border:2px solid #ffff00;
+          width: 105px
+          ">Other Awards</h4>
+     <ul>
+        <li>Named German Sportsman of the Year in <b>2003</b><\/li>
         <li>Recipient of the prestigious Fair Play Award by ITTF (International Table Tennis Federation)<\/li>
-        <li>Two times winner of the european team championship with Germany in 2017 and 2019
-      <\/ul>
-    `;
-  } else if (dropdown.value === "Bundesliga Awards") {
-    selectedText.innerHTML = `
-      <ul>
-        <li>Player of the Year: Timo Boll has been named Player of the Year multiple times in the Bundesliga. <br> This award recognizes his outstanding performance and contributions to the league.<\/li>
-        <li>Team Champion Titles: Boll has won 9x team champion titles with his club in the Bundesliga. <br> These titles signify his success in leading his team to victory and achieving excellence in team competitions.<\/li>
-      <\/ul>
-    `;
+        <li>Two times winner of the european team championship with Germany in <b>2017 </b> and <b> 2019 </b>
+      <\/ul></p>
+</div>
+
+      `;
    }
   }
   </script>
   <!-- I got the code for the boarders around the subtitles i got from W3 schools -->
   <!--I got the code for the skill bar also from w3 schools-->
-  <!--I got the idea and some code for the picture  map from w3 schools-->
-  <!--For the coordinates i used the paint app to locate the different countries coordinates-->
-  <!-- The code for the dropdown I got from chatgpt-->
+  <!--I got the idea and some code for the image  map from w3 schools-->
+  <!--Some of the code from the timeline i got from Chatgpt but changed it a bit-->
+  <!--The pictures such as the text about timo boll are from different google searches-->
 </body>
 </html>   
